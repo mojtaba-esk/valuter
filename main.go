@@ -22,6 +22,8 @@ func main() {
 	cachePath := filepath.Join(rootPath, "cache-dir")
 	simplecache.SetConfig(simplecache.Config{StorePath: cachePath})
 
+	_ = 5
+
 	psqlconn := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		os.Getenv("POSTGRES_HOST"),
 		os.Getenv("POSTGRES_PORT"),
